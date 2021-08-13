@@ -1,0 +1,9 @@
+We live in a big country. This country has town_counts towns in it. Each town has some post offices in which packages are stored and transferred.
+
+Post offices have different inner structure. Specifically, each of them has some limitations on the packages it can store - their weight should be between min_weight and max_weight inclusively, where min_weight and max_weight are fixed for each office.
+
+Packages are stored in some order in the office queue. That means, that they are processed using this order when sending and receiving.
+
+Sometimes two post offices, even in different towns, may organize the following transaction: the first one sends all its packages to the second one. The second one accepts the packages that satisfy the weight condition for the second office and rejects all other ones. These rejected packages return to the first office back and are stored in the same order they were stored before they were sent. The accepted packages move to the tail of the second office's queue in the same order they were stored in the first office.
+
+You should process several queries in your program. You'll be provided with structures packages, post_office and town . 
